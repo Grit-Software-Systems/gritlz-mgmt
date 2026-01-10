@@ -18,7 +18,7 @@ Replacements are denoted by the dollar-dollar curly braces token (e.g. $${starte
 You can define the Azure regions to use throughout the configuration.
 The first location will be used as the primary location, the second as the secondary location, and so on.
 */
-starter_locations = ["westus3", "eastus"]
+starter_locations = ["eastus"]
 
 /*
 --- Custom Replacements ---
@@ -428,7 +428,6 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${primary_bastion_subnet_address_prefix}"
       name                  = "$${primary_bastion_host_name}"
-      zones                 = null
       bastion_public_ip = {
         name = "$${primary_bastion_host_public_ip_name}"
       }
@@ -519,7 +518,6 @@ hub_virtual_networks = {
     bastion = {
       subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
       name                  = "$${secondary_bastion_host_name}"
-      zones                 = null
       bastion_public_ip = {
         name = "$${secondary_bastion_host_public_ip_name}"
       }
